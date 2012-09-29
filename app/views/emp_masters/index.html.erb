@@ -1,0 +1,34 @@
+
+
+<table id="employee">
+    <thead>
+  <tr>
+    <th>First name</th>
+    <th>Middle name</th>
+    <th>Last name</th>
+    
+    <th>Designation</th>
+   
+    <th>Department name</th>
+    <th>Email</th>
+    
+  </tr>
+  </thead>
+<tbody>
+<% @emp_masters.each do |emp_master| %>
+  <tr>
+    <td><%= link_to(emp_master.First_Name,emp_master) %></td>
+    <td><%= emp_master.Middle_Name %></td>
+    <td><%= emp_master.Last_Name %></td>
+    <td><%= emp_master.Designation %></td>
+    <td><%= emp_master.Department_Name %></td>
+    <td><%= emp_master.Email_id %></td>
+  
+  </tr>
+<% end %>
+</tbody>
+</table>
+
+<br />
+
+<%= link_to 'New Emp master', new_emp_master_path %>
